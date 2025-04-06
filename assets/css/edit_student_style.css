@@ -1,0 +1,164 @@
+/* Minimalist Monochrome Edit Form */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #fafafa;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 1.5rem;
+    margin: 1rem 0;
+}
+
+.form-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    animation: fadeIn 0.4s ease-out;
+    border: 1px solid #eee;
+}
+
+.form-card h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.form-card .subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f8f8f8;
+}
+
+.input-group input:focus {
+    border-color: #ddd;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    outline: none;
+}
+
+.success-msg, .error-msg {
+    font-size: 0.95rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid transparent;
+}
+
+.success-msg {
+    background: #f0f4f8;
+    color: #2d3748;
+    border-color: #e2e8f0;
+}
+
+.error-msg {
+    background: #fff5f5;
+    color: #c53030;
+    border-color: #fed7d7;
+}
+
+.form-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-submit {
+    flex: 1;
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 1.1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.02em;
+}
+
+.btn-submit:hover {
+    background: #2d2d2d;
+    transform: translateY(-1px);
+}
+
+.btn-cancel {
+    flex: 1;
+    background: transparent;
+    color: #666;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.1rem;
+    transition: all 0.25s ease;
+}
+
+.btn-cancel:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+    transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .form-card {
+        padding: 2rem;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-submit, .btn-cancel {
+        width: 100%;
+    }
+}

@@ -1,0 +1,384 @@
+/* Minimalist Monochrome Portal Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.portal-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 2.5rem 0;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.header-text p {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: #333;
+    padding: 0.75rem 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.main-nav li {
+    margin: 0 1.5rem;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.main-nav a i {
+    margin-right: 0.5rem;
+}
+
+.main-nav a:hover {
+    color: #ccc;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.portal-container {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 2rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-card {
+    background: #fff;
+    border-radius: 4px;
+    padding: 2.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.welcome-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Login Options */
+.login-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.role-card {
+    background: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.role-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.role-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+.role-card p {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.btn-admin, .btn-student {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    border: none;
+    width: 100%;
+}
+
+.btn-admin:hover, .btn-student:hover {
+    background: #222;
+}
+
+/* News Section */
+.news-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.announcement-box, .news-section > div {
+    background: #fff;
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.news-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.news-section h3 i {
+    margin-right: 0.5rem;
+    color: #555;
+}
+
+.announcement-list, .quick-links {
+    list-style-type: none;
+}
+
+.announcement-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.announcement-list li:last-child {
+    border-bottom: none;
+}
+
+.quick-links li {
+    padding: 0.5rem 0;
+}
+
+.quick-links a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.quick-links a i {
+    margin-right: 0.5rem;
+    width: 1rem;
+    text-align: center;
+}
+
+.quick-links a:hover {
+    color: #000;
+}
+
+/* Footer Styles */
+.portal-footer {
+    background: #333;
+    color: #eee;
+    padding: 3rem 0 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: #fff;
+}
+
+.footer-section p {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 1.5rem 1.5rem 0;
+    border-top: 1px solid #444;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .portal-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-section {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-text h1 {
+        font-size: 1.75rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav li {
+        margin: 0.25rem 0.75rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .portal-header {
+        padding: 1.5rem 0;
+    }
+    
+    .welcome-card {
+        padding: 1.5rem;
+    }
+}

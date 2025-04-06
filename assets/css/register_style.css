@@ -1,0 +1,228 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f7f7f7;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+/* Form Card */
+.form-card {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.form-card h1 {
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.form-card .subtitle {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Success & Error Messages */
+.success-msg, .error-msg {
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.success-msg {
+    background: #f1f5f1;
+    color: #1a5d1a;
+    border-left: 3px solid #1a5d1a;
+}
+
+.error-msg {
+    background: #f5f1f1;
+    color: #5d1a1a;
+    border-left: 3px solid #5d1a1a;
+}
+
+/* Form */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+/* eye icon */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Adjust padding to make space for the eye icon */
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8125rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+/* Buttons */
+.form-buttons {
+    margin-top: 1.75rem;
+}
+
+.form-buttons .btn-submit {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-buttons .btn-submit:hover {
+    background-color: #000;
+}
+
+.form-buttons p {
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+    color: #666;
+    text-align: center;
+}
+
+.form-buttons a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-buttons a:hover {
+    text-decoration: underline;
+}
+
+/* Admin-specific Styling */
+.form-card {
+    position: relative;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-card .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: #f2f2f2;
+    color: #555;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+/* Field validation */
+.input-group.has-error input {
+    border-color: #5d1a1a;
+}
+
+.input-group .hint-text {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.input-group .error-text {
+    font-size: 0.75rem;
+    color: #5d1a1a;
+    margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .form-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Optional: Light Mode / Dark Mode Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+/* For Select Dropdowns */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M8 10.5a.5.5 0 0 1-.354-.146l-4-4a.5.5 0 1 1 .708-.708L8 9.293l3.646-3.647a.5.5 0 0 1 .708.708l-4 4A.5.5 0 0 1 8 10.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+}
